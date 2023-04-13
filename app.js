@@ -76,9 +76,22 @@ let app = Vue.createApp({
 
     })
 
-app.mount('#app')
+    n = new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("dateANDtime").innerHTML = m + '/' + d + '/' + y;
 
 
+    app.mount('#app');
+
+
+/* module.exports = {
+    publicPath: process.env.Node_ENV === "production" ? "softwareFrontEnd2023" : "/",
+
+}; */
+
+const toTop = () => window.scrollTo({top: 0, behavior : "smooth"});
 
 
 
@@ -97,7 +110,7 @@ window.onscroll = () => {
     }
 } 
 
-// Back to top
+//Back to top
 
 const toTop = () => window.scrollTo({top: 0, behavior : "smooth"});
 
