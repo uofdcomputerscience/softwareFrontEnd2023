@@ -10,6 +10,68 @@
 </head>
 
 <body>
+
+  <style>
+    nav {
+      position:sticky;
+
+    }
+    .myForm {
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-size: 0.8em;
+      position: fixed; /* or absolute */
+      top: 50%;
+      left: 33%;
+    }
+  
+    .myForm label {
+      color: white;
+      padding: 0.5;
+      font-weight: bold;
+    }
+  
+    .myForm input {
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-size: 0.9em;
+      padding: 0.3em;
+    }
+  
+    .myForm input[type="email"],
+    .myForm input[type="password"] {
+      width: 10em;
+      height: 1.75em;
+    }
+  
+    .myForm button {
+      padding: 0.7em;
+      border-radius: 0.5em;
+      background: #fff;
+      border: none;
+      font-weight: bold;
+    }
+  
+    .myForm button:hover {
+      background: #fff;
+      cursor: pointer;
+    }
+
+  </style>
+  
+  <div id="particles-js">
+      <h1 id = "title"> Class List and Times</h1>
+
+    <table>
+        <thread>
+          <tr>
+            <th> Name </th>
+            <th> Time </th>
+            <th> Status <th>
+          </tr>
+        </thread>
+    </table>
+  </div>
   <nav>
     <input type="checkbox" id="check">
     <label for="check" class="check-btn">
