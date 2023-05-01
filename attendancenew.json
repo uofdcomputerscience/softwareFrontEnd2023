@@ -1,0 +1,16 @@
+{"name":"Robert Hochberg", 
+  "classes":[{"class_name":"Intro",  
+                    "class_id":"aB2f",
+                    "class_days":[  {"date":"2023-04-20",  "attendance":[ {"student_name":"Jacob"},
+                                                                          {"student_name":"Mister"}, 
+                                                                          {"student_name":"Blister"},
+                                                                          {"student_name":"Sister"},
+                                                                          {"student_name":"Lister"},
+                                                                          {"student_name":"Crister"},
+                                                                          {"student_name":"Wrister"}]},
+                                             {"date":"2023-04-25",  "attendance":[{"student_name":"Jacob2"}]},
+                                             {"date":"2023-04-27",  "attendance":[{"student_name":"Jacob3"}]},
+                                             {"date":"2023-04-30",  "attendance":[{"student_name":"Jacob4"}]}
+                                          ] 
+                      } ]
+}
