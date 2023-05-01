@@ -13,21 +13,27 @@
     $(function() {
 
 
-   var attendance = [];
+   var attendances = [];
 
+ 
    $.getJSON('attendancenew.json', function(data) {
     console.log("hello there!");
     $('#display').html('<p> Name: ' + data.name + '</p>');
     $('#display').append('<p>className : ' + data.classes[0].class_name + '</p>');
     $('#display').append('<p> ID: ' + data.classes[0].class_id + '</p>');
-       $.each(data.classes[0].class_days, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.date + "</td>" + "<td>" + f.attendance[0].student_name + "</td>" + "</tr>"
-           $(tblRow).appendTo("#userdata tbody");
+    $('#display').append('<p> Day: ' + data.classes[0].class_days[0].date + '</p>');
+    console.log(data.classes[0].class_days[0].attendance[0].student_name);
+    $.each(data.classes[0].class_days[0].attendance, function(i, f) {
+        var tblRow = "<tr>" + "<td>" + f.student_name + "</td>" + "</tr>"
+        $(tblRow).appendTo("#userdata tbody");
+
+      });
      });
+
+  
 
    });
 
-});
 </script>
 
 </head>
@@ -89,8 +95,7 @@
 
       <table id= "userdata" border="2">
         <thead>
-                  <th>Class Day</th>
-                  <th>Attendance</th>
+                  <th>List of Students in Class Today</th>
               </thead>
             <tbody>
       
