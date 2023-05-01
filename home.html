@@ -7,35 +7,7 @@
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" media="screen" href="index.css">
-  <script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-  <script>
-
-    $(function() {
-
-
-   var attendances = [];
-
- 
-   $.getJSON('attendancenew.json', function(data) {
-    console.log("hello there!");
-    $('#display').html('<p> Name: ' + data.name + '</p>');
-    $('#display').append('<p>className : ' + data.classes[0].class_name + '</p>');
-    $('#display').append('<p> ID: ' + data.classes[0].class_id + '</p>');
-    $('#display').append('<p> Day: ' + data.classes[0].class_days[0].date + '</p>');
-    console.log(data.classes[0].class_days[0].attendance[0].student_name);
-    $.each(data.classes[0].class_days[0].attendance, function(i, f) {
-        var tblRow = "<tr>" + "<td>" + f.student_name + "</td>" + "</tr>"
-        $(tblRow).appendTo("#userdata tbody");
-
-      });
-     });
-
   
-
-   });
-
-</script>
-
 </head>
 
 <body>
@@ -89,22 +61,6 @@
   </style>
   
   <div id="particles-js">
-      <h1 id = "title"> Class List and Times</h1>
-      <p> Attendance data </p>
-      <h2 id="display" style="background-color:#ffffffc9;"></h2>
-
-      <table id= "userdata" border="2">
-        <thead>
-                  <th>List of Students in Class Today</th>
-              </thead>
-            <tbody>
-      
-             </tbody>
-         </table>
-
-    
-
-
 
   </div>
 
