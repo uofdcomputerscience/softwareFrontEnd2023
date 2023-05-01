@@ -7,6 +7,29 @@
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" media="screen" href="index.css">
+  <script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+  <script>
+
+    $(function() {
+
+
+   var attendance = [];
+
+   $.getJSON('attendancenew.json', function(data) {
+    console.log("hello there!");
+    $('#display').html('<p> Name: ' + data.name + '</p>');
+    $('#display').append('<p>className : ' + data.classes[0].class_name + '</p>');
+    $('#display').append('<p> ID: ' + data.classes[0].class_id + '</p>');
+       $.each(data.classes[0].class_days, function(i, f) {
+          var tblRow = "<tr>" + "<td>" + f.date + "</td>" + "<td>" + f.attendance[0].student_name + "</td>" + "</tr>"
+           $(tblRow).appendTo("#userdata tbody");
+     });
+
+   });
+
+});
+</script>
+
 </head>
 
 <body>
@@ -61,17 +84,27 @@
   
   <div id="particles-js">
       <h1 id = "title"> Class List and Times</h1>
+      <p> Attendance data </p>
+      <h2 id="display" style="background-color:#ffffffc9;"></h2>
 
-    <table>
-        <thread>
-          <tr>
-            <th> Name </th>
-            <th> Time </th>
-            <th> Status <th>
-          </tr>
-        </thread>
-    </table>
+      <table id= "userdata" border="2">
+        <thead>
+                  <th>Class Day</th>
+                  <th>Attendance</th>
+              </thead>
+            <tbody>
+      
+             </tbody>
+         </table>
+
+    
+
+
+
   </div>
+
+
+
   <nav>
     <input type="checkbox" id="check">
     <label for="check" class="check-btn">
@@ -91,6 +124,8 @@
   <!-- scripts -->
   <script src="particles.js"></script>
   <script src="app.js"></script>
+
+  
 
   <!-- stats.js -->
   <script src="js/lib/stats.js"></script>
