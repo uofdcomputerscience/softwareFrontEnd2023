@@ -25,32 +25,32 @@
   <section></section>
   <!-- particles.js container -->
   <div id="particles-js">
-    <script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
     <script>
   
-      $(function() {
-  
-  
-     var attendances = [];
-  
-   
-     $.getJSON('attendancenew.json', function(data) {
-      console.log("hello there!");
-      $('#display').html('<p> Name: ' + data.name + '</p>');
-      $('#display').append('<p>className : ' + data.classes[0].class_name + '</p>');
-      $('#display').append('<p> ID: ' + data.classes[0].class_id + '</p>');
-      $('#display').append('<p> Day: ' + data.classes[0].class_days[0].date + '</p>');
-      console.log(data.classes[0].class_days[0].attendance[0].student_name);
-      $.each(data.classes[0].class_days[0].attendance, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.student_name + "</td>" + "</tr>"
+    $(function() {
+
+
+   var attendances = [];
+
+   $.getJSON('attendancenewfinal.json', function(data) {
+    console.log(Object.keys(data.classes[0].class_days).length);
+    var lastElement = Object.keys(data.classes[0].class_days).length-1;
+    console.log(lastElement);
+    console.log("hello there!");
+    $('#display').html('<p> Name: ' + data.name + '</p>');
+    $('#display').append('<p>Class Name: ' + data.classes[0].class_name + '</p>');
+    $('#display').append('<p> ID: ' + data.classes[0].class_id + '</p>');
+    $('#display').append('<p> Class Day: ' + data.classes[0].class_days[lastElement].date.substr(0,10) + '</p>');
+    console.log(data.classes[0].class_days[1].attendance[1].name);
+    $.each(data.classes[0].class_days[lastElement].attendance, function(i, f) {
+          var tblRow = "<tr>" + "<td>" + f.name + "</td>" + "<td>" + f.time.substr(14, 16) + "</td>" + "</tr>"
           $(tblRow).appendTo("#userdata tbody");
   
-        });
-       });
-  
-    
-  
-     });
+    }); 
+});
+
+});
   
   </script>
   
@@ -60,7 +60,8 @@
   
         <table id= "userdata" border="2">
           <thead>
-                    <th>List of Students in Class Today</th>
+            <th>Students attended today</th>
+            <th>Time of Arrival</th>
                 </thead>
               <tbody>
         
