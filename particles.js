@@ -11,10 +11,10 @@ var pJS = function(tag_id, params){
     },
     particles: {
       number: {
-        value: 100,
+        value: 60,
         density: {
           enable: true,
-          value_area: 100
+          value_area: 1500
         }
       },
       color: {
