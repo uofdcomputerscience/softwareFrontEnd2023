@@ -11,6 +11,8 @@
 
 <body>
   <nav>
+    <img src="UDLogo.png" alt="UD Logo" width="80" height="79">
+    <img src="UDText.png" alt="UD Text" width="270" height="79">
     <input type="checkbox" id="check">
     <label for="check" class="check-btn">
         <i class="fas fa-bars"></i>
@@ -25,10 +27,14 @@
   </nav>
   <section></section>
 
-
   
   <!-- particles.js container -->
   <div id="particles-js">
+    <button id="btnnxcl">Next Class</button>
+    <button id="btnpvcl">Prev Class</button>
+    <button id="btnnxd">Next Day</button>
+    <button id="btnpvd">Prev Day</button>
+    <button id="resetbt">Reset List*</button>
     <h1 id = "title">Class List</h1>
     <p> Attendance Data </p>
     <script src= "https://code.jquery.com/jquery-3.6.3.js"> </script>
@@ -181,14 +187,6 @@ $.getJSON('attendancenewfinal.json', function(data) {
         
                </tbody>
            </table>                         
-           <button id="btnnxcl">Next Class</button>
-           <button id="btnpvcl">Prev Class</button>
-           <button id="btnnxd">Next Day</button>
-           <button id="btnpvd">Prev Day</button>
-           <button id="resetbt">Reset List*</button>
-
-
-
   </div>
 
   <!-- scripts -->
