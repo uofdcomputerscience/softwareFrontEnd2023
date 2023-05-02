@@ -10,6 +10,8 @@
 </head>
 
 <body>
+  <h1> Welcome!</h1> 
+  <h2>Please log in using your udallas email and password.</h2>
   <nav>
     <img src="UDLogo.png" alt="UD Logo" width="80" height="79">
     <img src="UDText.png" alt="UD Text" width="270" height="79">
@@ -28,16 +30,65 @@
 
 
   <style>
-    nav {
-      position:sticky;
 
+    input[type='checkbox'] {
+          position: absolute;
+          left: -25%;
+          top: 10%;
+          font-size: 20px;
+    }
+
+    .label3{
+      font-size: 0.8em;
+      position: absolute;
+      left: 35%;
+      top: 70%;
+
+    }
+
+    .login {
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-size: 0.5em;
+      position: static;
+      background-color: white;
+      border:1px;
+      position: absolute;
+      left: 79%;
+      top: 63%;
+    }
+
+    h1{
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-size: 3.9em;
+      line-height: 0%;
+      position: static;
+      background-color: white;
+      position: absolute;
+      left: 43%;
+      top: 48%;
+    }
+
+    h2{
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-size: 1.9em;
+      line-height: 0%;
+      position: static;
+      background-color: white;
+      color:white;
+      position: absolute;
+      left: 27%;
+      top: 56%;
+    }
+
+    nav {
+      position:static;
     }
     .myForm {
       font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-      font-size: 0.8em;
-      position: fixed; /* or absolute */
-      top: 50%;
-      left: 33%;
+      font-size: 0.9em;
+      position: absolute; /* or absolute */
+      top: 61%;
+      left: 30%;
     }
   
     .myForm label {
@@ -84,14 +135,18 @@
       <label>Password
         <input type="password" name="user_pwd" required>
       </label>
-      <button>Log In</button>
+    
+      </form>
     </p>
     <p>
-      <label>
+      <label class = "label3">
         <input type="checkbox"> Remember me
       </label>
     </p>
   </form>
+  <a href = "http://127.0.0.1:5500/classList.html">
+      <button class = "login" ><b>Log in</b></button>
+  </a>
 </div>
 
   <!-- scripts -->
