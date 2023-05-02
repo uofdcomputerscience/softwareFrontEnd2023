@@ -18,6 +18,18 @@
 
    /* ---- Table ----*/
 
+   button {
+    text-align: center;
+    float: left;
+    background-color: #f7faf7; /* Green */
+    border: 1px black;
+    color: rgb(3, 3, 3);
+    padding: 5px 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+  }
+
     table {
         margin: 0 auto;
         font-size: medium;

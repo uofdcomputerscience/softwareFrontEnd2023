@@ -2,19 +2,27 @@
   "name": "Robert Hochberg",
   "classes": [
     {
-      "class_name": "Intro",
-      "class_id": "aB2f",
+      "class_name": "Intro1",
+      "class_id": "aB2f1",
       "class_days": [
         {
-          "date": "2023-04-20T19:26:18.883Z",
           "attendance": [
             {
-              "Student Name": "Time of Arrival"
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
             }
-          ]
+          ],
+          "classDate": "2023-04-20T19:26:18.883Z"
         },
         {
-          "date": "2023-04-25T14:16:42.448Z",
           "attendance": [
             {
               "name": "Student Name",
@@ -24,15 +32,17 @@
               "name": "Student Name",
               "time": "2023-04-25T14:07:42.448Z"
             }
-          ]
+          ],
+          "classDate": "2023-04-25T14:16:42.448Z",
+          "name": "test"
         },
         {
-          "date": "2023-04-27T19:30:31.263Z",
-          "attendance": [              {
-            "name": "Student Name",
-            "time": "2023-04-25T14:07:42.448Z"
-          },
-          {
+          "attendance": [
+           {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+           },
+           {
             "name": "Student Name",
             "time": "2023-04-25T14:07:42.448Z"
           },
@@ -40,21 +50,246 @@
             "name": "Student Name",
             "time": "2023-04-25T14:07:42.448Z"
           }
-          ]
+          ],
+          "classDate": "2023-04-27T19:30:31.263Z",
+          "name": "test"
         },
         {
-          "date": "2023-05-01T00:49:51.030Z",
-          "attendance": [{
-            "name": "Student Name",
-            "time": "2023-04-25T14:07:42.448Z"
-          },              {
-            "name": "Student Name",
-            "time": "2023-04-25T14:07:42.448Z"
-          },              {
-            "name": "Student Name",
-            "time": "2023-04-25T14:07:42.448Z"
-          }
-          ]
+          "attendance": [
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }
+          ],
+          "classDate": "2023-05-01T00:49:51.030Z",
+          "name": "none"
+        }
+      ]
+    },
+    {
+      "class_name": "Intro2",
+      "class_id": "aB2f2",
+      "class_days": [
+        {
+          "attendance": [
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }, {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }, {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }
+          ],
+          "classDate": "2023-04-20T19:26:18.883Z"
+        },
+        {
+          "attendance": [
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }
+          ],
+          "classDate": "2023-04-25T14:16:42.448Z",
+          "name": "test"
+        },
+        {
+          "attendance": [
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }
+          ],
+          "classDate": "2023-04-27T19:30:31.263Z",
+          "name": "test"
+        },
+        {
+          "attendance": [
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }, {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }, {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }
+          ],
+          "classDate": "2023-05-01T00:49:51.030Z",
+          "name": "none"
+        }
+      ]
+    },
+    {
+      "class_name": "Intro3",
+      "class_id": "aB2f3",
+      "class_days": [
+        {
+          "attendance": [
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }
+          ],
+          "classDate": "2023-04-20T19:26:18.883Z"
+        },
+        {
+          "attendance": [
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }
+          ],
+          "classDate": "2023-04-25T14:16:42.448Z",
+          "name": "test"
+        },
+        {
+          "attendance": [
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }
+          ],
+          "classDate": "2023-04-27T19:30:31.263Z",
+          "name": "test"
+        },
+        {
+          "attendance": [
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }, {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }, {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }
+          ],
+          "classDate": "2023-05-01T00:49:51.030Z",
+          "name": "none"
+        }
+      ]
+    },
+    {
+      "class_name": "Intro4",
+      "class_id": "aB2f4",
+      "class_days": [
+        {
+          "attendance": [
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }, {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }, {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }
+          ],
+          "classDate": "2023-04-20T19:26:18.883Z"
+        },
+        {
+          "attendance": [
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            },
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }
+          ],
+          "classDate": "2023-04-25T14:16:42.448Z",
+          "name": "test"
+        },
+        {
+          "attendance": [
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }, {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }, {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }          ],
+          "classDate": "2023-04-27T19:30:31.263Z",
+          "name": "test"
+        },
+        {
+          "attendance": [
+            {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }, {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }, {
+              "name": "Student Name",
+              "time": "2023-04-25T14:07:42.448Z"
+            }
+
+          ],
+          "classDate": "2023-05-01T00:49:51.030Z",
+          "name": "none"
         }
       ]
     }

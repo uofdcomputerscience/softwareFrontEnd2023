@@ -31,32 +31,141 @@
   <div id="particles-js">
     <h1 id = "title">Class List</h1>
     <p> Attendance Data </p>
-    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <script src= "https://code.jquery.com/jquery-3.6.3.js"> </script>
     <script>
-  
-    $(function() {
+$.getJSON('attendancenewfinal.json', function(data) {
+    var classesNum = 0; 
+    var dayNum = 0; 
+    var LastDay = Object.keys(data.classes[classesNum].class_days).length;
+    var LastClass = Object.keys(data.classes).length; 
 
 
-   var attendances = [];
+    $("#btnnxcl").on("click", function(){
+      $('#userdata tbody').empty();
 
-   $.getJSON('attendancenewfinal.json', function(data) {
-    console.log(Object.keys(data.classes[0].class_days).length);
-    var lastElement = Object.keys(data.classes[0].class_days).length-1;
-    console.log(lastElement);
-    console.log("hello there!");
-    $('#display').html('<p> Name: ' + data.name + '</p>');
-    $('#display').append('<p>Class Name: ' + data.classes[0].class_name + '</p>');
-    $('#display').append('<p> ID: ' + data.classes[0].class_id + '</p>');
-    $('#display').append('<p> Class Day: ' + data.classes[0].class_days[lastElement].date.substr(0,10) + '</p>');
-    console.log(data.classes[0].class_days[1].attendance[1].name);
-    $.each(data.classes[0].class_days[lastElement].attendance, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.name + "</td>" + "<td>" + f.time.substr(14, 16) + "</td>" + "</tr>"
-          $(tblRow).appendTo("#userdata tbody");
-  
-    }); 
-});
+      if (classesNum < LastClass){ 
+        classesNum++;
+        console.log("it was lesser: " + classesNum);
+      }else if (classesNum >= LastClass){
+        classesNum = LastClass;
+        console.log("it was >=: " + classesNum);
+      } else {
+        classesNum = 0; 
+        console.log("neither restart!: " + classesNum);
+      };
+      $('#display').html('<p> Name: ' + data.name + '</p>');
+      $('#display').append('<p>Class Name: ' + data.classes[classesNum].class_name + '</p>');
+      $('#display').append('<p> ID: ' + data.classes[classesNum].class_id + '</p>');
+      $('#display').append('<p> Class Day: ' + data.classes[classesNum].class_days[dayNum].classDate.substr(0,10) + '</p>');
+      console.log(data.classes[classesNum].class_days[dayNum].attendance[0].name);
 
-});
+      $.each(data.classes[classesNum].class_days[dayNum].attendance, function(i, f) {
+            var tblRow = "<tr>" + "<td>" + f.name + "</td>" + "<td>" + f.time.substr(14, 16) + "</td>" + "</tr>"
+            $(tblRow).appendTo("#userdata tbody");
+
+      });
+    });
+
+    $("#btnpvcl").on("click", function(){
+      $('#userdata tbody').empty();
+
+      if (classesNum > 0){
+        classesNum--; 
+        console.log("its not zero yet!: " + classesNum);
+      } else if(classesNum <= 0){
+        classesNum = 0;
+        console.log("it is <= 0!: " + classesNum);
+      } else {
+        classesNum = 0;
+        console.log("something went wrong....um!!! restart" + classesNum);
+      };
+        $('#display').html('<p> Name: ' + data.name + '</p>');
+        $('#display').append('<p>Class Name: ' + data.classes[classesNum].class_name + '</p>');
+        $('#display').append('<p> ID: ' + data.classes[classesNum].class_id + '</p>');
+        $('#display').append('<p> Class Day: ' + data.classes[classesNum].class_days[dayNum].classDate.substr(0,10) + '</p>');
+        console.log(data.classes[classesNum].class_days[dayNum].attendance[0].name);
+
+        $.each(data.classes[classesNum].class_days[dayNum].attendance, function(i, f) {
+              var tblRow = "<tr>" + "<td>" + f.name + "</td>" + "<td>" + f.time.substr(14, 16) + "</td>" + "</tr>"
+              $(tblRow).appendTo("#userdata tbody");
+
+        });
+    });
+
+      $("#btnnxd").on("click", function(){
+        $('#userdata tbody').empty();
+
+        if(dayNum < LastDay){
+          dayNum++;
+          console.log("it was lesser: " + dayNum);
+        } else if ( dayNum >= LastDay){
+          dayNum = 0; 
+          console.log("it is <= 0!: " + dayNum);
+        } else {
+          dayNum = 0;
+          console.log("somethings off with day index, heres the value: "+dayNum);
+
+        };
+        $('#display').html('<p> Name: ' + data.name + '</p>');
+        $('#display').append('<p>Class Name: ' + data.classes[classesNum].class_name + '</p>');
+        $('#display').append('<p> ID: ' + data.classes[classesNum].class_id + '</p>');
+        $('#display').append('<p> Class Day: ' + data.classes[classesNum].class_days[dayNum].classDate.substr(0,10) + '</p>');
+        console.log(data.classes[classesNum].class_days[dayNum].attendance[0].name);
+
+        $.each(data.classes[classesNum].class_days[dayNum].attendance, function(i, f) {
+              var tblRow = "<tr>" + "<td>" + f.name + "</td>" + "<td>" + f.time.substr(14, 16) + "</td>" + "</tr>"
+              $(tblRow).appendTo("#userdata tbody");
+
+        });
+      });
+
+      $("#btnpvd").on("click", function(){
+        $('#userdata tbody').empty();
+
+          if (dayNum > 0){
+           return dayNum--; 
+            console.log("its not zero yet!: " + dayNum);
+          } else if(dayNum <= 0){
+            dayNum = 0;
+            console.log("it is <= 0!: " + dayNum);
+          } else {
+            dayNum = 0;
+            console.log("something went wrong....um!!! restart" + dayNum);
+        };
+        $('#display').html('<p> Name: ' + data.name + '</p>');
+        $('#display').append('<p>Class Name: ' + data.classes[classesNum].class_name + '</p>');
+        $('#display').append('<p> ID: ' + data.classes[classesNum].class_id + '</p>');
+        $('#display').append('<p> Class Day: ' + data.classes[classesNum].class_days[dayNum].classDate.substr(0,10) + '</p>');
+        console.log(data.classes[classesNum].class_days[dayNum].attendance[0].name);
+
+        $.each(data.classes[classesNum].class_days[dayNum].attendance, function(i, f) {
+              var tblRow = "<tr>" + "<td>" + f.name + "</td>" + "<td>" + f.time.substr(14, 16) + "</td>" + "</tr>"
+              $(tblRow).appendTo("#userdata tbody");
+
+        });
+      });
+
+      $("#resetbt").on("click", function(){
+        $('#userdata tbody').empty();
+        $('#display h2').empty();
+
+
+      });
+    });
+
+
+   /*  console.log(LastDay);
+    console.log(LastClass);
+    console.log(data.classes[classesNum].class_name);
+    console.log(data.classes[classesNum].class_days[dayNum].classDate);
+
+    
+
+
+    console.log("hello there!"); */
+    
+
+
   
   </script>
         <h2 id="display" style="background-color:#ffffffc9;"></h2>
@@ -71,7 +180,15 @@
               <tbody>
         
                </tbody>
-           </table>
+           </table>                         
+           <button id="btnnxcl">Next Class</button>
+           <button id="btnpvcl">Prev Class</button>
+           <button id="btnnxd">Next Day</button>
+           <button id="btnpvd">Prev Day</button>
+           <button id="resetbt">Reset List*</button>
+
+
+
   </div>
 
   <!-- scripts -->
@@ -103,5 +220,4 @@
 
 
 </body>
-
 </html>
